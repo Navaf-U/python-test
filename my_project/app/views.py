@@ -4,3 +4,7 @@ from django.shortcuts import render,HttpResponse
 
 def sample(request):
     return render(request,'abc.html')
+
+def login(request):
+    i = "wdwadkoadowp"
+    return HttpResponse(i)
