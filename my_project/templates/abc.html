@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>python test</title>
+    <title>Product List</title>
 </head>
 <body>
-    <h1>hello</h1>
-    <p>test with python</p>
-    <a href="/login">hoooo</a>
-    <br>
-    <h1>to see the products</h1>
-    <li href="/products">products</li>
-    
+    <h1>logged user</h1>
+    <a href="/login">user</a>
+    <h1>Product List</h1>
+    <a href="/products">products</a>
+    <ul>
+        {% for product in products %}
+            <li>
+                <strong>Name:</strong> {{ product.name }} <br>
+                <strong>Price:</strong> ${{ product.price }} <br>
+                <strong>Description:</strong> {{ product.desc }} <br>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
